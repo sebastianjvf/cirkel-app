@@ -2,8 +2,9 @@
 (function() {
 	
 	// Onload
-	window.addEventListener('load', function(event) {
-		
+	window.addEventListener('load', loadGeoData);
+	
+	function loadGeoData() {
 		// Check for support
 		if (navigator.geolocation) {
 		  console.log('Geolocation is supported!')
@@ -13,8 +14,7 @@
 		} else {
 		  console.log('Geolocation is not supported for this Browser/OS.');
 		}
-		
-	});
+	}
 	
 	// Updates the current location
 	function makeLocationCall() {
