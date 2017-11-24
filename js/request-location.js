@@ -31,6 +31,9 @@
 		    
 		    latitudeDiv.innerHTML = startPos.coords.latitude;
 		    longitudeDiv.innerHTML = startPos.coords.longitude;
+		    
+		    let JSON = packToJSON(startPos.coords.latitude, startPos.coords.longitude);
+		    sendToServer(JSON);
 		};
 		
 		// If an error occured, display it on the screen
@@ -59,6 +62,23 @@
 		
 		// Call getCurrentPosition and set a callback for error handling
 		navigator.geolocation.getCurrentPosition(geoSuccess, geoError);
+	}
+	
+	// Parses the given information to a JSON
+	function packToJSON(latitude, longitude) {
+		let JSON = [];
+		JSON.push(
+			"{",
+				"location:", "{",
+					"latitude:", latitude,
+					"longitude:", longitude,
+				"}",
+			"}"
+		);
+	}
+	
+	// Sends the GPS data to the server
+	function sendToServer(JSON, url) {
 	}
 	
 })();
