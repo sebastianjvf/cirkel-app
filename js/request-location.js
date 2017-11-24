@@ -39,8 +39,18 @@
 		    let JSON = packToJSON(latitude, longitude);
 		    console.log('JSON: ' + JSON);
 		    
-		    // Send to server on call
-		    sendToServer(JSON);
+		    // Send to server on call and receive some output
+		    // TODO
+		    let requestData = sendRequest(JSON, 'url');
+		    
+		    // Check if was successful or not
+		    if(requestData === '') {
+		    	// If not, update the screen and display a message
+		    	console.log('Could not be loaded.');
+		    } else {
+		    	// If yes, let's parse the JSON and update the UI
+		    	updateUI(requestData);
+		    }
 		};
 		
 		// If an error occured, display it on the screen
@@ -84,7 +94,36 @@
 	}
 	
 	// Sends the GPS data to the server
-	function sendToServer(JSON, url) {
+	function sendRequest(JSON, url) {
+		
+		let result = false;
+		
+		// Make a request
+		let request = new XMLHttpRequest();
+		
+		request.onreadystatechange = function() {
+		    // When the request was successful
+		    if (this.readyState == 4 && this.status == 200) {
+		      
+		       // Loading screen
+		       document.getElementById('message').innerHTML = xhttp.responseText;
+		       result =  xhttp.responseText;
+		    }
+		};
+		
+		// Start the connection
+		xhttp.open('GET', url, true);
+		
+		// Send a JSON string
+		xhttp.send(JSON);
+		
+		// Return the result
+		return result;
+	}
+	
+	// Updates the UI with the data which was received
+	function updateUI(requestData) {
+		
 	}
 	
 })();
