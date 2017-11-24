@@ -4,6 +4,9 @@
 	// Onload
 	window.addEventListener('load', loadGeoData);
 	
+	// When data was received, update the UI
+	window.addEventListener('data-received', updateUI);
+	
 	function loadGeoData() {
 		// Check for support
 		if (navigator.geolocation) {
@@ -41,16 +44,7 @@
 		    
 		    // Send to server on call and receive some output
 		    // TODO
-		    let requestData = sendRequest(JSON, 'url');
-		    
-		    // Check if was successful or not
-		    if(requestData === '') {
-		    	// If not, update the screen and display a message
-		    	console.log('Could not be loaded.');
-		    } else {
-		    	// If yes, let's parse the JSON and update the UI
-		    	updateUI(requestData);
-		    }
+		    sendRequest(JSON, 'url');
 		};
 		
 		// If an error occured, display it on the screen
@@ -95,9 +89,6 @@
 	
 	// Sends the GPS data to the server
 	function sendRequest(JSON, url) {
-		
-		let result = false;
-		
 		// Make a request
 		let request = new XMLHttpRequest();
 		
@@ -106,24 +97,32 @@
 		    if (this.readyState == 4 && this.status == 200) {
 		      
 		       // Loading screen
-		       document.getElementById('message').innerHTML = xhttp.responseText;
-		       result =  xhttp.responseText;
+		       document.getElementById('message').innerHTML = request.responseText;
+		       dataReceived =  request.responseText;
+		       
+		       // TODO
+		       // process dataReceived
+		       
+		       // Dispatch a data received event to update the UI
+		       // let dataReceived now		       
+		       let event = new CustomEvent('data-recevied', {
+		       detail: dataReceived
+		       });
+		       
+		       window.dispatchEvent(event);
 		    }
 		};
 		
 		// Start the connection
-		xhttp.open('GET', url, true);
+		request.open('POST', url, true);
 		
 		// Send a JSON string
-		xhttp.send(JSON);
-		
-		// Return the result
-		return result;
+		request.send(JSON);
 	}
 	
 	// Updates the UI with the data which was received
-	function updateUI(requestData) {
-		
+	function updateUI(event) {
+		// event.detail holds the data
 	}
 	
 })();
