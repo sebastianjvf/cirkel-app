@@ -33,6 +33,8 @@
 		    longitudeDiv.innerHTML = startPos.coords.longitude;
 		    
 		    let JSON = packToJSON(startPos.coords.latitude, startPos.coords.longitude);
+		    console.log("JSON: " + JSON);
+		    
 		    sendToServer(JSON);
 		};
 		
