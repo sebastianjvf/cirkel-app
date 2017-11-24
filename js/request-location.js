@@ -67,6 +67,7 @@
 	// Parses the given information to a JSON
 	function packToJSON(latitude, longitude) {
 		let JSON = [];
+		
 		JSON.push(
 			"{",
 				"location:", "{",
@@ -75,6 +76,8 @@
 				"}",
 			"}"
 		);
+		
+		console.log("JSON: " + JSON);
 	}
 	
 	// Sends the GPS data to the server
