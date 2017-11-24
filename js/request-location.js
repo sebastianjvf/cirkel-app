@@ -29,12 +29,17 @@
 		let geoSuccess = function(position) {
 		    startPos = position;
 		    
-		    latitudeDiv.innerHTML = startPos.coords.latitude;
-		    longitudeDiv.innerHTML = startPos.coords.longitude;
+		    let latitude = startPos.coords.latitude;
+		    let longitude = startPos.coords.longitude;
 		    
-		    let JSON = packToJSON(startPos.coords.latitude, startPos.coords.longitude);
+		    latitudeDiv.innerHTML = latitude;
+		    longitudeDiv.innerHTML = longitude;
+		    
+		    // Parse to JSON
+		    let JSON = packToJSON(latitude, longitude);
 		    console.log('JSON: ' + JSON);
 		    
+		    // Send to server on call
 		    sendToServer(JSON);
 		};
 		
@@ -66,7 +71,7 @@
 		navigator.geolocation.getCurrentPosition(geoSuccess, geoError);
 	}
 	
-	// Parses the given information to a JSON
+	// Parses the given information to JSON
 	function packToJSON(latitude, longitude) {
 		let jsonObject = {
 			location : {
