@@ -73,7 +73,7 @@
 		JSON.push(
 			"{",
 				"location:", "{",
-					"latitude:", latitude,
+					"latitude:", latitude, ",",
 					"longitude:", longitude,
 				"}",
 			"}"
