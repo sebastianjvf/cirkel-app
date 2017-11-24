@@ -1,0 +1,14 @@
+html {
+	font: normal 62.5%/1.5 "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+}
+
+div#coordinates div {
+	font-size: 3rem;
+	margin-bottom: 3rem;
+	font-weight: bold;
+}
+
+div#coordinates div span {
+	display: block;
+	font-weight: normal;
+}
