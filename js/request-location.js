@@ -33,7 +33,7 @@
 		    longitudeDiv.innerHTML = startPos.coords.longitude;
 		    
 		    let JSON = packToJSON(startPos.coords.latitude, startPos.coords.longitude);
-		    console.log("JSON: " + JSON);
+		    console.log('JSON: ' + JSON);
 		    
 		    sendToServer(JSON);
 		};
@@ -46,16 +46,16 @@
 		    
 		    switch (error.code) {
 		    	case 0:
-		    		errorMessage = "Unknown error.";
+		    		errorMessage = 'Unknown error.';
 		    		break;
 		    	case 1:
-		    		errorMessage = "Permission denied";
+		    		errorMessage = 'Permission denied';
 		    		break;
 		    	case 2:
-		    		errorMessage = "Position unavailable";
+		    		errorMessage = 'Position unavailable';
 		    		break;
 		    	case 3:
-		    		errorMessage = "Timed out";
+		    		errorMessage = 'Timed out';
 		    		break;
 		    }
 		    
@@ -68,18 +68,14 @@
 	
 	// Parses the given information to a JSON
 	function packToJSON(latitude, longitude) {
-		let JSON = [];
+		let jsonObject = {
+			location : {
+				latitude : latitude,
+				longitude : longitude
+			}
+		};
 		
-		JSON.push(
-			"{",
-				"location:", "{",
-					"latitude:", latitude, ",",
-					"longitude:", longitude,
-				"}",
-			"}"
-		);
-		
-		return JSON.join('');
+		return JSON.stringify(jsonObject);
 	}
 	
 	// Sends the GPS data to the server
