@@ -79,7 +79,7 @@
 			"}"
 		);
 		
-		console.log("JSON: " + JSON);
+		return JSON.join('');
 	}
 	
 	// Sends the GPS data to the server
