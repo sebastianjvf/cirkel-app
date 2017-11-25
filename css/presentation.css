@@ -20,8 +20,6 @@ header {
 	color: #f0f0f0;
 	font-size: 2.5rem;
 	font-weight: bold;
-	position: -webkit-sticky;
-	position: sticky;
 	top: 0;
 	background-color: rgba(0, 0, 0, .9);
 	flex: 0 0 0;
@@ -141,23 +139,27 @@ ul#little-circles li#circle-4 {
 }
 
 /* Tracks */
-div#song-list {
+div#song-list,
+div#single-song-menu {
 	flex: 1 0 0;
 	position: relative;
-	transition: bottom 0.3s ease-in-out;
+	transition: bottom 0.4s ease-in-out;
 }
 
-div#song-list h1 {
+div#song-list h1,
+div#single-song-menu h1 {
 	color: #000000;
 	padding-left: 2.5rem;
 	font: bold 2.5rem/2 "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
 }
 
-div#song-list ul {
+div#song-list ul,
+div#single-song-menu div#single-song {
 	background-color: #000000;
 }
 
-div#song-list ul li {
+div#song-list ul li,
+div#single-song-menu div#single-song {
 	font-size: 2.2rem;
 	text-transform: uppercase;
 	padding: 2.5rem 2.5rem 2.5rem 2.5rem;
@@ -168,44 +170,48 @@ div#song-list ul li {
 }
 
 div#song-list ul li div.song-colour,
-div#song-list ul li div.preview {
+div#song-list ul li div.preview,
+div#single-song-menu div.song-colour, 
+div#single-song-menu div.preview {
 	width: 5rem;
 	height: 5rem;
 }
 
-div#song-list ul li div.song-colour {
+div#song-list ul li div.song-colour,
+div#single-song-menu div.song-colour {
 	width: 5rem;
 	height: 5rem;
 	border-radius: 100%;
 	background-color: #ffffff;
 }
 
-div#song-list ul li div.info {
+div#song-list ul li div.info,
+div#single-song-menu div.info {
 	flex: 1 0 0;
 	margin-left: 3rem;
 }
 
 /* Song title */
-div#song-list ul li div.info span.title {
+div#song-list ul li div.info span.title,
+div#single-song-menu div.info span.title {
 	display: block;
 	color: #f0f0f0;
 	text-transform: none;
 	margin-bottom: 0.5rem;
 }
 
-div#song-list ul li div.info span.artist {
-	color: #888888;
-	font-size: 1.5rem;
-}
-
-div#song-list ul li div.info span.artist {
+div#song-list ul li div.info span.artist,
+div#single-song-menu div.info span.artist {
 	color: #888888;
 	font-size: 1.5rem;
 }
 
 div#song-list ul li div.preview,
 div#song-list ul li a.add,
-div#song-list ul li a.added {
+div#song-list ul li a.added,
+div#single-song-menu div.preview,
+div#single-song-menu a.add,
+div#single-song-menu a.added {
 	border-radius: 100%;
 	font-size: 1.2rem;
 	cursor: pointer;
@@ -222,14 +228,19 @@ div#song-list ul li a.added {
 }
 
 div#song-list ul li a.add,
-div#song-list ul li a.added {
+div#song-list ul li a.added,
+div#single-song-menu a.add,
+div#single-song-menu a.added {
 	margin-left: 2rem;
 	background: url('../img/add.svg') no-repeat center center/30%;
 }
 
 div#song-list ul li a.added,
 div#song-list ul li a.added:hover,
-div#song-list ul li a.added:focus {
+div#song-list ul li a.added:focus,
+div#single-song-menu a.added,
+div#single-song-menua.added:hover,
+div#single-song-menu a.added:focus {
 	border-color: #1ED760;
 	background-size: 40%;
 	background-image: url('../img/added.svg');
@@ -238,7 +249,11 @@ div#song-list ul li a.added:focus {
 div#song-list ul li div.preview:hover,
 div#song-list ul li div.preview:focus,
 div#song-list ul li a.add:hover,
-div#song-list ul li a.add:focus {
+div#song-list ul li a.add:focus,
+div#single-song-menu div.preview:hover,
+div#single-song-menu div.preview:focus,
+div#single-song-menu a.add:hover,
+div#single-song-menu a.add:focus {
 	color: #f0f0f0;
 	border-color: #f0f0f0;
 }
