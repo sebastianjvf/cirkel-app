@@ -12,6 +12,7 @@
 		let hasCircleEnvironment = false;
 		
 		let userCircle = document.getElementById('user-circle');
+		let textLabel = document.getElementById('text');
 		let perimetre = document.getElementById('perimetre');
 		let isPulsing = false;
 		
@@ -41,14 +42,23 @@
 			circleEnvironment.style.pointerEvents = 'none';
 		}
 		
+		function updatePulseText(text) {
+			textLabel.innerHTML = text;
+		}
+		
 		function showPulse(text) {
 			// Update text
-			userCircle.innerHTML = text;
-			let pulse = document.createElement('div');
-			pulse.id = 'perimetre';
-			pulse.classList.add('pulsing');
-			console.log(pulse);
-			userCircle.appendChild(pulse);
+			updatePulseText(text);
+			
+			// Create the pulse
+			// Add pulse
+			perimetre.classList.add('pulsing');
+			
+			// Adjust colours
+			userCircle.style.backgroundColor = '#B9316E';
+			userCircle.style.color = '#791240';
+			
+			// update
 			
 			// Remove pointer and click events
 			userCircle.pointerEvents = 'none';
@@ -65,8 +75,23 @@
 		
 		userCircle.addEventListener('click', function () {
 			showPulse('Analysing...');
-			showCircleEnvironment();
-			showSongList();
+			
+			// After 3 seconds, make circles appear
+			setTimeout(function() {
+				updatePulseText('Finding music...');
+				
+				setTimeout(function() {
+					showCircleEnvironment();
+					showSongList();
+					updatePulseText('Your colour.');
+					
+					setTimeout(function() {
+						hidePulse();
+					}, 2300);
+					
+				}, 1500);
+				
+			}, 2000);
 		});
 		
 		// Listen for selected events
