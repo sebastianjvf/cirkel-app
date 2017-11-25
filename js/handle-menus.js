@@ -3,6 +3,9 @@
 	window.addEventListener('load', function() {
 		
 		/* Define elements and functions */
+		let menuBar = document.getElementsByTagName('header')[0];
+		console.log(menuBar);
+		
 		let coloursAroundYou = document.getElementById('song-list');
 		let hasColoursAroundYou = false;
 		
@@ -18,7 +21,14 @@
 		let isPulsing = false;
 		
 		let closeSingeSongMenuButton = document.getElementById('close-single-song');
-		console.log(closeSingeSongMenuButton);
+		
+		function showMenuBar() {
+			menuBar.style.top = '0';
+		}
+		
+		function hideMenuBar() {
+			menuBar.style.top = '-50%';
+		}
 		
 		function showSongList() {
 			coloursAroundYou.style.bottom = '0';
@@ -63,6 +73,7 @@
 			userCircle.style.color = '#791240';
 			
 			// update
+			// TODO
 			
 			// Remove pointer and click events
 			userCircle.pointerEvents = 'none';
@@ -72,32 +83,6 @@
 			perimetre.classList.remove('pulsing');
 		}
 		
-		// Hide everything on load
-		hideSongList();
-		showSingleSongMenu();
-		hideCircleEnvironment();
-		
-		// Start app on click
-		userCircle.addEventListener('click', function () {
-			showPulse('Analysing...');
-			
-			// After 3 seconds, make circles appear
-			setTimeout(function() {
-				updatePulseText('Finding<br>music...');
-				
-				setTimeout(function() {
-					showCircleEnvironment();
-					showSongList();
-					updatePulseText('Your colour.');
-					
-					setTimeout(function() {
-						hidePulse();
-					}, 1100);
-					
-				}, 1500);
-				
-			}, 1500);
-		});
 		
 		// Listen for selected events
 		window.addEventListener('circle-selected', function(event) {
@@ -123,6 +108,34 @@
 			Array.from(circles).forEach(function(element) {
 				element.classList.remove('selected');
 			});
+		});
+		
+		// Hide everything on load
+		hideMenuBar();
+		hideSongList();
+		hideSingleSongMenu();
+		hideCircleEnvironment();
+		
+		// Start app on click
+		userCircle.addEventListener('click', function () {
+			showPulse('Analysing...');
+			
+			// After 3 seconds, make circles appear
+			setTimeout(function() {
+				updatePulseText('Finding<br>music...');
+				
+				setTimeout(function() {
+					showCircleEnvironment();
+					showSongList();
+					updatePulseText('Your colour.');
+					
+					setTimeout(function() {
+						hidePulse();
+					}, 1100);
+					
+				}, 1500);
+				
+			}, 1500);
 		});
 		
 	});

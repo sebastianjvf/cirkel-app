@@ -30,6 +30,9 @@ header {
 	flex-direction: row;
 	justify-content: flex-start;
 	align-items: center;
+	
+	position: relative;
+	transition: top 0.4s ease-in-out;
 }
 
 header span#logo {
@@ -46,7 +49,7 @@ div#visualisation {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	flex: 0 0 34rem;
+	flex: 0 0 32rem;
 	position: relative;
 }
 
@@ -253,6 +256,9 @@ div#single-song-menu a.added {
 	width: 4.3rem;
 	height: 4.3rem;
 	transition: border-color 0.2s ease-in-out, color 0.2s ease-in-out;
+	
+	text-indent: -999rem;
+	background: url('../img/play.svg') no-repeat center center/30%;
 }
 
 div#song-list ul li a.add,
@@ -284,11 +290,6 @@ div#single-song-menu a.add:hover,
 div#single-song-menu a.add:focus {
 	color: #f0f0f0;
 	border-color: #f0f0f0;
-}
-
-div#song-list ul li div.preview {
-	text-indent: -9999rem;
-	background: url('../img/play.svg') no-repeat center center/30%; 
 }
 
 div#single-song {
