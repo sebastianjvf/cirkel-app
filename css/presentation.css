@@ -257,7 +257,8 @@ div#single-song-menu a.added {
 
 div#song-list ul li a.add,
 div#song-list ul li a.added,
-div#single-song-menu a.add,adiv#single-song-menu a.added {
+div#single-song-menu a.add,
+div#single-song-menu a.added {
 	margin-left: 2rem;
 	background: url('../img/add.svg') no-repeat center center/36%;
 }
