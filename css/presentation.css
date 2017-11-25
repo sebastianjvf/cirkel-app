@@ -33,24 +33,26 @@ div#visualisation {
 	justify-content: center;
 	align-items: center;
 	flex: 0 0 42rem;
+	position: relative;
 }
 
 div#perimetre {
 	width: 30rem;
 	height: 30rem;
-	border-radius: 100%;
+	border-radius: 30rem;
 	background-color: rgba(45, 45, 45, .15);
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	
+	animation: pulse 1s ease-in-out 0s infinite alternate;
 }
 
 div#user-circle {
 	width: 23rem;
 	height: 23rem;
-	border-radius: 100%;
+	border-radius: 30rem;
 	background-color: #B9316E;
-	animation: pulse 1s ease-in-out 0s infinite alternate;
 	
 	display: flex;
 	justify-content: center;
@@ -63,17 +65,56 @@ div#user-circle {
 
 @keyframes pulse {
 	from {
-		width: 22rem;
-		height: 22rem;
+		width: 30rem;
+		height: 30rem;
 	}
 	
 	to {
-		width: 23rem;
-		height: 23rem;
+		width: 35rem;
+		height: 35rem;
 	}
 }
 
-div#little-circles ul li {
+/* Little circles */
+ul#little-circles {
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+}
+
+ul#little-circles li {
+	width: 2.5rem;
+	height: 2.5rem;
+	border-radius: 100%;
+	background-color: #000000;
+	position: relative;
+}
+
+ul#little-circles li#circle-0 {
+	top: 10%;
+	left: 30%;
+}
+
+ul#little-circles li#circle-1 {
+	top: 30%;
+	left: 20%;
+}
+
+ul#little-circles li#circle-2 {
+	top: 10%;
+	left: 80%;
+}
+
+ul#little-circles li#circle-3 {
+	top: 30%;
+	left: 75%;
+}
+
+ul#little-circles li#circle-4 {
+	top: 60%;
+	left: 35%;
 }
 
 /* Tracks */
@@ -138,8 +179,8 @@ div#song-list ul li div.info span.artist {
 }
 
 div#song-list ul li div.preview,
-div#song-list ul li div.add,
-div#song-list ul li div.added {
+div#song-list ul li a.add,
+div#song-list ul li a.added {
 	border-radius: 100%;
 	font-size: 1.2rem;
 	cursor: pointer;
@@ -152,18 +193,18 @@ div#song-list ul li div.added {
 	align-items: center;
 	width: 5.3rem;
 	height: 5.3rem;
-	transition: all 0.2s ease-in-out;
+	transition: border-color 0.2s ease-in-out;
 }
 
-div#song-list ul li div.add,
-div#song-list ul li div.added {
+div#song-list ul li a.add,
+div#song-list ul li a.added {
 	margin-left: 2rem;
 	background: url('../img/add.svg') no-repeat center center/30%;
 }
 
-div#song-list ul li div.added,
-div#song-list ul li div.added:hover,
-div#song-list ul li div.added:focus {
+div#song-list ul li a.added,
+div#song-list ul li a.added:hover,
+div#song-list ul li a.added:focus {
 	border-color: #1ED760;
 	background-size: 40%;
 	background-image: url('../img/added.svg');
@@ -171,8 +212,8 @@ div#song-list ul li div.added:focus {
 
 div#song-list ul li div.preview:hover,
 div#song-list ul li div.preview:focus,
-div#song-list ul li div.add:hover,
-div#song-list ul li div.add:focus {
+div#song-list ul li a.add:hover,
+div#song-list ul li a.add:focus {
 	color: #f0f0f0;
 	border-color: #f0f0f0;
 }
