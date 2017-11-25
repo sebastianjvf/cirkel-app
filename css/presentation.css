@@ -36,18 +36,6 @@ div#visualisation {
 	position: relative;
 }
 
-div#perimetre {
-	width: 30rem;
-	height: 30rem;
-	border-radius: 30rem;
-	background-color: rgba(45, 45, 45, .15);
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	
-	animation: pulse 1s ease-in-out 0s infinite alternate;
-}
-
 div#user-circle {
 	width: 23rem;
 	height: 23rem;
@@ -61,17 +49,36 @@ div#user-circle {
 	font-size: 2.5rem;
 	font-weight: bold;
 	color: #791240;
+	
+	position: relative;
+}
+
+
+div#perimetre {
+	width: 30rem;
+	height: 30rem;
+	border-radius: 30rem;
+	background-color: rgba(45, 45, 45, .15);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -1;
+	transform-origin: center center;
+	
+	animation: pulse 1s ease-in-out 0s infinite alternate;
 }
 
 @keyframes pulse {
 	from {
-		width: 30rem;
-		height: 30rem;
+		transform: translateX(-12%) translateY(-11.5%) scale(1.2);
 	}
 	
 	to {
-		width: 35rem;
-		height: 35rem;
+		transform: translateX(-12%) translateY(-11.5%);
 	}
 }
 
