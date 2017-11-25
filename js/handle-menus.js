@@ -4,22 +4,13 @@
 		
 		/* Define elements and functions */
 		let menuBar = document.getElementsByTagName('header')[0];
-		console.log(menuBar);
-		
+		let visualisation = document.getElementById('visualisation');
 		let coloursAroundYou = document.getElementById('song-list');
-		let hasColoursAroundYou = false;
-		
 		let singleSongMenu = document.getElementById('single-song-menu');
-		let hasSingleSongMenu = false;
-		
 		let circleEnvironment = document.getElementById('little-circles');
-		let hasCircleEnvironment = false;
-		
 		let userCircle = document.getElementById('user-circle');
 		let textLabel = document.getElementById('text');
 		let perimetre = document.getElementById('perimetre');
-		let isPulsing = false;
-		
 		let closeSingeSongMenuButton = document.getElementById('close-single-song');
 		
 		function showMenuBar() {
@@ -28,6 +19,20 @@
 		
 		function hideMenuBar() {
 			menuBar.style.top = '-50%';
+		}
+		
+		function showVisualisation() {
+			visualisation.style.opacity = '1';
+			visualisation.style.pointerEvents = 'auto';
+			userCircle.style.pointerEvents = 'auto';
+		}
+		
+		function hideVisualisation() {
+			visualisation.style.opacity = '0';
+			visualisation.style.pointerEvents = 'none';
+			userCircle.style.pointerEvents = 'none';
+			
+			hideCircleEnvironment();
 		}
 		
 		function showSongList() {
@@ -115,6 +120,7 @@
 		hideSongList();
 		hideSingleSongMenu();
 		hideCircleEnvironment();
+		hideVisualisation();
 		
 		// Start app on click
 		userCircle.addEventListener('click', function () {

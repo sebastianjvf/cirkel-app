@@ -32,6 +32,7 @@ header {
 	align-items: center;
 	
 	position: relative;
+	top: -30%;
 	transition: top 0.4s ease-in-out;
 }
 
@@ -51,6 +52,9 @@ div#visualisation {
 	align-items: center;
 	flex: 0 0 32rem;
 	position: relative;
+	
+	opacity: 0;
+	transition: opacity 0.2s ease-in-out;
 }
 
 div#user-circle {
@@ -305,3 +309,5 @@ a#close-single-song {
 	transform: translateY(-1rem);
 	background: url('../img/close-menu.svg') no-repeat center center/2rem;
 }
+
+/* Welcome screen */
