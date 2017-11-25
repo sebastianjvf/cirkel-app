@@ -33,10 +33,10 @@ div#visualisation {
 }
 
 div#perimetre {
-	width: 28rem;
-	height: 28rem;
+	width: 30rem;
+	height: 30rem;
 	border-radius: 100%;
-	background-color: #ededed;
+	background-color: rgba(45, 45, 45, .15);
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -70,12 +70,21 @@ div#user-circle {
 	}
 }
 
-div.little-circles {
+div#little-circles ul li {
 }
 
 /* Tracks */
 div#song-list {
 	flex: 1 0 0;
+}
+
+div#song-list h1 {
+	color: #000000;
+	padding-left: 2.5rem;
+	font: bold 2.5rem/2 "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+}
+
+div#song-list ul {
 	background-color: #000000;
 }
 
@@ -89,6 +98,12 @@ div#song-list ul li {
 	align-items: center;
 }
 
+div#song-list ul li div.song-colour,
+div#song-list ul li div.preview {
+	width: 5rem;
+	height: 5rem;
+}
+
 div#song-list ul li div.song-colour {
 	width: 5rem;
 	height: 5rem;
@@ -98,7 +113,7 @@ div#song-list ul li div.song-colour {
 
 div#song-list ul li div.info {
 	flex: 1 0 0;
-	padding-left: 2rem;
+	margin-left: 3rem;
 }
 
 /* Song title */
@@ -112,4 +127,49 @@ div#song-list ul li div.info span.title {
 div#song-list ul li div.info span.artist {
 	color: #888888;
 	font-size: 1.5rem;
+}
+
+div#song-list ul li div.info span.artist {
+	color: #888888;
+	font-size: 1.5rem;
+}
+
+div#song-list ul li div.preview,
+div#song-list ul li div.add,
+div#song-list ul li div.added {
+	border-radius: 100%;
+	font-size: 1.2rem;
+	cursor: pointer;
+	color: #777777;
+	text-transform: none;
+	border: 0.2rem solid #555555;
+	
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 5.3rem;
+	height: 5.3rem;
+	transition: all 0.2s ease-in-out;
+}
+
+div#song-list ul li div.add,
+div#song-list ul li div.added {
+	margin-left: 2rem;
+	background: url('../img/add.svg') no-repeat center center/30%;
+}
+
+div#song-list ul li div.added,
+div#song-list ul li div.added:hover,
+div#song-list ul li div.added:focus {
+	border-color: #1ED760;
+	background-size: 40%;
+	background-image: url('../img/added.svg');
+}
+
+div#song-list ul li div.preview:hover,
+div#song-list ul li div.preview:focus,
+div#song-list ul li div.add:hover,
+div#song-list ul li div.add:focus {
+	color: #f0f0f0;
+	border-color: #f0f0f0;
 }
