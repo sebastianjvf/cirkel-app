@@ -214,7 +214,7 @@ div#song-list ul li a.added {
 	align-items: center;
 	width: 5.3rem;
 	height: 5.3rem;
-	transition: border-color 0.2s ease-in-out;
+	transition: border-color 0.2s ease-in-out, color 0.2s ease-in-out;
 }
 
 div#song-list ul li a.add,
