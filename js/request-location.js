@@ -5,7 +5,8 @@
 	window.addEventListener('load', loadGeoData);
 	
 	// When data was received, update the UI
-	window.addEventListener('data-received', updateUI);
+	let dataReceived = 'data-received';
+	window.addEventListener(dataReceived, updateUI);
 	
 	function loadGeoData() {
 		// Check for support
@@ -105,8 +106,8 @@
 		       
 		       // Dispatch a data received event to update the UI
 		       // let dataReceived now		       
-		       let event = new CustomEvent('data-recevied', {
-		       detail: dataReceived
+		       let event = new CustomEvent(dataReceived, {
+		       		detail: dataReceived
 		       });
 		       
 		       window.dispatchEvent(event);
@@ -114,7 +115,7 @@
 		};
 		
 		// Start the connection
-		request.open('POST', url, true);
+		request.open('GET', url, true);
 		
 		// Send a JSON string
 		request.send(JSON);
