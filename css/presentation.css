@@ -101,7 +101,16 @@ ul#little-circles li {
 }
 
 ul#little-circles li.selected:before {
-	content: 'Hello';
+	content: '';
+	display: block;
+	width: 3.5rem;
+	height: 3.5rem;
+	position: absolute;
+	top: -0.6rem;
+	left: -0.6rem;
+	z-index: -1;
+	border: 1px solid;
+	border-radius: 30rem;
 }
 
 ul#little-circles li#circle-0 {
