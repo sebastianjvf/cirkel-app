@@ -12,6 +12,8 @@
 		let textLabel = document.getElementById('text');
 		let perimetre = document.getElementById('perimetre');
 		let closeSingeSongMenuButton = document.getElementById('close-single-song');
+		let introScreen = document.getElementById('intro-screen');
+		let startButton = document.getElementById('start-button');
 		
 		function showMenuBar() {
 			menuBar.style.top = '0';
@@ -88,7 +90,6 @@
 			perimetre.classList.remove('pulsing');
 		}
 		
-		
 		// Listen for selected events
 		window.addEventListener('circle-selected', function(event) {
 			hideSongList();
@@ -121,6 +122,22 @@
 		hideSingleSongMenu();
 		hideCircleEnvironment();
 		hideVisualisation();
+		
+		// Start the app on button click
+		startButton.addEventListener('click', function(event) {
+			// Authenticate
+			// TODO
+			
+			// Make button unclickable
+			startButton.style.pointerEvents = 'none';
+			
+			// Hide the welcome screen
+			introScreen.style.display = 'none';
+			
+			// Show visualisation
+			// Starts the actual app
+			showVisualisation();
+		});
 		
 		// Start app on click
 		userCircle.addEventListener('click', function () {

@@ -33,6 +33,7 @@ header {
 	
 	position: relative;
 	top: -30%;
+	z-index: 301;
 	transition: top 0.4s ease-in-out;
 }
 
@@ -317,7 +318,7 @@ div#intro-screen {
 	position: absolute;
 	width: 100vw;
 	height: 100vh;
-	z-index: 0;
+	z-index: 300;
 	background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), linear-gradient(180deg, #14316B, #011337);
 	
 	color: #ffffff;
@@ -348,6 +349,7 @@ div#intro-screen a#start-button {
 	border-radius: 30rem;
 	padding: 1rem 2rem 1.1rem 2rem;
 	font-weight: bold;
+	cursor: pointer;
 	margin: 2rem auto 0 auto;
 	background-color: #1ED760;
 }
