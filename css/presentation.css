@@ -23,6 +23,8 @@ header {
 	font-size: 2rem;
 	font-weight: bold;
 	top: 0;
+	position: sticky;
+	position: -webkit-sticky;
 	background-color: rgba(0, 0, 0, .9);
 	flex: 0 0 0;
 }
@@ -35,12 +37,6 @@ div#visualisation {
 	align-items: center;
 	flex: 0 0 34rem;
 	position: relative;
-}
-
-div#menus {
-	height: 100px;
-	overflow: scroll;
-	flex: 1 0 0;
 }
 
 div#user-circle {
@@ -142,7 +138,7 @@ ul#little-circles li#circle-3 {
 }
 
 ul#little-circles li#circle-4 {
-	top: 60%;
+	top: 56%;
 	left: 35%;
 }
 
@@ -152,6 +148,7 @@ div#single-song-menu {
 	flex: 1 0 0;
 	width: 100%;
 	position: absolute;
+	z-index: 200;
 	transition: bottom 0.4s ease-in-out;
 }
 
