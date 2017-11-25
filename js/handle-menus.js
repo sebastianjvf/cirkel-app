@@ -58,13 +58,13 @@
 			perimetre.classList.remove('pulsing');
 		}
 		
-		// Call on load up
+		// Hide everything on load
 		hideSongList();
 		hideSingleSongMenu();
 		hideCircleEnvironment();
 		
 		userCircle.addEventListener('click', function () {
-			showPulse('Your colour.');
+			showPulse('Analysing...');
 			showCircleEnvironment();
 			showSongList();
 		});

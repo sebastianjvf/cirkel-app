@@ -18,15 +18,26 @@ main {
 
 /* Header bar */
 header {
-	padding: 1.2rem;
+	padding: 2rem 1.4rem;
 	color: #f0f0f0;
 	font-size: 2rem;
 	font-weight: bold;
 	top: 0;
-	position: sticky;
-	position: -webkit-sticky;
 	background-color: rgba(0, 0, 0, .9);
 	flex: 0 0 0;
+	
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: center;
+}
+
+header span#logo {
+	width: 2rem;
+	height: 2rem;
+	display: block;
+	margin-right: 1rem;
+	background: url('../img/logo.svg') no-repeat;
 }
 
 /* Circle visualisation */
