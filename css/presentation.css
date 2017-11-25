@@ -318,11 +318,10 @@ div#intro-screen {
 	width: 100vw;
 	height: 100vh;
 	z-index: 0;
-	padding: 3rem;
 	background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), linear-gradient(180deg, #14316B, #011337);
 	
 	color: #ffffff;
-	font-size: 1.7rem;
+	font-size: 1.6rem;
 	line-height: 1.5;
 	
 	display: flex;
@@ -331,7 +330,7 @@ div#intro-screen {
 }
 
 div#intro-screen h1 {
-	font-size: 2.5rem;
+	font-size: 2.2rem;
 	font-weight: bold;
 	color: #ffffff;
 	text-align: left;
