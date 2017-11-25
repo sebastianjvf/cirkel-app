@@ -135,6 +135,9 @@
 			// Authenticate
 			// TODO
 			
+			// Request location
+			requestGeoData();
+			
 			// Make button unclickable
 			startButton.style.pointerEvents = 'none';
 			
