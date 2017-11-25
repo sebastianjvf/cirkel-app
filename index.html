@@ -11,81 +11,82 @@
 	<script src="js/request-location.js" type="text/javascript"></script>
 	<script src="js/add-to-playlist.js" type="text/javascript"></script>
 	<script src="js/handle-circle-click.js" type="text/javascript"></script>
-	<script src="js/toggle-user-info.js" type="text/javascript"></script>
+	<script src="js/handle-menus.js" type="text/javascript"></script>
 	
 </head>
 	<body>
+	<main>
+				<header>
+					Cirkel
+				</header>
+				
+				<div id="visualisation">
+					<ul id="little-circles">
+						<li id="circle-0"></li>
+						<li id="circle-1"></li>
+						<li id="circle-2"></li>
+						<li id="circle-3"></li>
+						<li id="circle-4"></li>
+					</ul>
+					
+					<div id="user-circle">
+						Mixing colours.
+						<div id="perimetre"></div>
+					</div>
+					</div>
+				</div>
+				
+				<div id="song-list">
+					<h1>Colours around you</h1>
+					<ul>
+						<li>
+							<div class="song-colour"></div>
+							<div class="info">
+								<span class="title">Title</span>
+								<span class="artist">Artist #1</span>
+							</div>
+							<div class="preview">
+								Preview
+							</div>
+							<a class="add">
+							</a>
+						</li>
+						<li>
+							<div class="song-colour"></div>
+							<div class="info">
+								<span class="title">Title</span>
+								<span class="artist">Artist #2</span>
+							</div>
+							<div class="preview">
+								Preview
+							</div>
+							<a class="add"></a>
+						</li>
+						<li>
+							<div class="song-colour"></div>
+							<div class="info">
+								<span class="title">Title</span>
+								<span class="artist">Artist #3</span>
+							</div>
+							<div class="preview">
+								Preview
+							</div>
+							<a class="add"></a>
+						</li>
+						<li>
+							<div class="song-colour"></div>
+							<div class="info">
+								<span class="title">Title</span>
+								<span class="artist">Artist #4</span>
+							</div>
+							<div class="preview">
+								Preview
+							</div>
+							<a class="add"></a>
+						</li>
+					</ul>
+				</div>
 		
-		<header>
-			Cirkel
-		</header>
-		
-		<div id="visualisation">
-			<ul id="little-circles">
-				<li id="circle-0" class="selected"></li>
-				<li id="circle-1"></li>
-				<li id="circle-2"></li>
-				<li id="circle-3"></li>
-				<li id="circle-4"></li>
-			</ul>
-			
-			<div id="user-circle">
-				Mixing colours.
-				<div id="perimetre"></div>
-			</div>
-			</div>
-		</div>
-		
-		<div id="song-list">
-			<h1>Colours around you</h1>
-			<ul>
-				<li>
-					<div class="song-colour"></div>
-					<div class="info">
-						<span class="title">Title</span>
-						<span class="artist">Artist #1</span>
-					</div>
-					<div class="preview">
-						Preview
-					</div>
-					<a class="add">
-					</a>
-				</li>
-				<li>
-					<div class="song-colour"></div>
-					<div class="info">
-						<span class="title">Title</span>
-						<span class="artist">Artist #2</span>
-					</div>
-					<div class="preview">
-						Preview
-					</div>
-					<a class="add"></a>
-				</li>
-				<li>
-					<div class="song-colour"></div>
-					<div class="info">
-						<span class="title">Title</span>
-						<span class="artist">Artist #3</span>
-					</div>
-					<div class="preview">
-						Preview
-					</div>
-					<a class="add"></a>
-				</li>
-				<li>
-					<div class="song-colour"></div>
-					<div class="info">
-						<span class="title">Title</span>
-						<span class="artist">Artist #4</span>
-					</div>
-					<div class="preview">
-						Preview
-					</div>
-					<a class="add"></a>
-				</li>
-			</ul>
-		</div>
-		
+	</main>	
 	</body>
 </html>
