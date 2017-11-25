@@ -42,6 +42,7 @@ div#visualisation {
 div#user-circle {
 	width: 17rem;
 	height: 17rem;
+	cursor: pointer;
 	border-radius: 30rem;
 	background-color: #B9316E;
 	
@@ -70,17 +71,19 @@ div#perimetre {
 	left: 0;
 	z-index: -1;
 	transform-origin: center center;
-	
+}
+
+div.pulsing {
 	animation: pulse 1s ease-in-out 0s infinite alternate;
 }
 
 @keyframes pulse {
 	from {
-		transform: translateX(0%) translateY(0%) scale(1.4);
+		transform: translateX(0%) translateY(0%);
 	}
 	
 	to {
-		transform: translateX(0%) translateY(0%);
+		transform: translateX(0%) translateY(0%) scale(1.4);
 	}
 }
 
@@ -92,6 +95,7 @@ ul#little-circles {
 	height: 100%;
 	z-index: 100;
 	position: absolute;
+	transition: all 0.3s ease-in;
 }
 
 ul#little-circles li {
