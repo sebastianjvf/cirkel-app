@@ -26,6 +26,7 @@
 					circle.classList.add(selectedClassName);
 					
 					// UPDATE menu
+					// TODO
 					
 					console.log('SELECTED');
 					
