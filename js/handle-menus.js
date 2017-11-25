@@ -2,6 +2,7 @@
 	
 	window.addEventListener('load', function() {
 		
+		/* Define elements and functions */
 		let coloursAroundYou = document.getElementById('song-list');
 		let hasColoursAroundYou = false;
 		
@@ -15,6 +16,9 @@
 		let textLabel = document.getElementById('text');
 		let perimetre = document.getElementById('perimetre');
 		let isPulsing = false;
+		
+		let closeSingeSongMenuButton = document.getElementById('close-single-song');
+		console.log(closeSingeSongMenuButton);
 		
 		function showSongList() {
 			coloursAroundYou.style.bottom = '0';
@@ -70,15 +74,16 @@
 		
 		// Hide everything on load
 		hideSongList();
-		hideSingleSongMenu();
+		showSingleSongMenu();
 		hideCircleEnvironment();
 		
+		// Start app on click
 		userCircle.addEventListener('click', function () {
 			showPulse('Analysing...');
 			
 			// After 3 seconds, make circles appear
 			setTimeout(function() {
-				updatePulseText('Finding music...');
+				updatePulseText('Finding<br>music...');
 				
 				setTimeout(function() {
 					showCircleEnvironment();
@@ -87,11 +92,11 @@
 					
 					setTimeout(function() {
 						hidePulse();
-					}, 2300);
+					}, 1100);
 					
 				}, 1500);
 				
-			}, 2000);
+			}, 1500);
 		});
 		
 		// Listen for selected events
@@ -104,6 +109,20 @@
 		window.addEventListener('circle-deselected', function(event) {
 			showSongList();
 			hideSingleSongMenu();
+		});
+		
+		// Close single song menu on click, unselect elements and show menu 
+		closeSingeSongMenuButton.addEventListener('click', function(event) {
+			
+			hideSingleSongMenu();
+			showSongList();
+			
+			// Hide
+			let circles = document.querySelectorAll('#little-circles li');
+			console.log(circles);
+			Array.from(circles).forEach(function(element) {
+				element.classList.remove('selected');
+			});
 		});
 		
 	});
