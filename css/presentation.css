@@ -36,7 +36,7 @@ header {
 	transition: top 0.4s ease-in-out;
 }
 
-header span#logo {
+header span.logo {
 	width: 2rem;
 	height: 2rem;
 	display: block;
@@ -310,4 +310,45 @@ a#close-single-song {
 	background: url('../img/close-menu.svg') no-repeat center center/2rem;
 }
 
-/* Welcome screen */
+/* Intro screen */
+div#intro-screen {
+	top: 0;
+	left: 0;
+	position: absolute;
+	width: 100vw;
+	height: 100vh;
+	z-index: 0;
+	padding: 3rem;
+	background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), linear-gradient(180deg, #14316B, #011337);
+	
+	color: #ffffff;
+	font-size: 1.7rem;
+	line-height: 1.5;
+	
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+div#intro-screen h1 {
+	font-size: 2.5rem;
+	font-weight: bold;
+	color: #ffffff;
+	text-align: left;
+	margin-bottom: 2rem;
+}
+
+div#intro-screen div#centre {
+	width: 84%;
+}
+
+div#intro-screen a#start-button {
+	display: block;
+	width: 50%;
+	text-align: center;
+	border-radius: 30rem;
+	padding: 1rem 2rem 1.1rem 2rem;
+	font-weight: bold;
+	margin: 2rem auto 0 auto;
+	background-color: #1ED760;
+}

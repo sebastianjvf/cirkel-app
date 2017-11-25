@@ -116,7 +116,7 @@
 		});
 		
 		// Hide everything on load
-		hideMenuBar();
+		showMenuBar();
 		hideSongList();
 		hideSingleSongMenu();
 		hideCircleEnvironment();
