@@ -4,7 +4,9 @@
 		
 		let circles = document.querySelectorAll('#little-circles li');
 		let selectedClassName = 'selected';
-		console.log(circles);
+		
+		// Get the menu
+		let singleSongMenu = document.getElementById('single-song-menu');
 		
 		circleArray = Array.from(circles);
 		
@@ -22,6 +24,8 @@
 				} else {
 					// SELECTED Show menu
 					circle.classList.add(selectedClassName);
+					
+					// UPDATE menu
 					
 					console.log('SELECTED');
 					

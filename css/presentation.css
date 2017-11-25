@@ -5,6 +5,8 @@ html {
 html,
 body {
 	height: 100%;
+	z-index: -500;
+	background: linear-gradient(180deg, #14316B, #011337);
 }
 
 /* Flexin' it */
@@ -81,7 +83,7 @@ div#perimetre {
 	width: 17rem;
 	height: 17rem;
 	border-radius: 30rem;
-	background-color: rgba(45, 45, 45, .15);
+	background-color: rgba(255, 255, 255, .1);
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -89,7 +91,8 @@ div#perimetre {
 	position: absolute;
 	top: 0;
 	left: 0;
-	z-index: -1;
+	z-index: 300;
+	transition: opacity 0.3s ease-in-out;
 	transform-origin: center center;
 }
 
@@ -138,7 +141,7 @@ ul#little-circles li.selected:before {
 	top: -0.6rem;
 	left: -0.6rem;
 	z-index: -1;
-	border: 1px solid;
+	border: 1px solid #ffffff;
 	border-radius: 30rem;
 }
 
@@ -184,7 +187,7 @@ div#song-list div#scroll {
 
 div#song-list h1,
 div#single-song-menu h1 {
-	color: #000000;
+	color: #ffffff;
 	padding-left: 2rem;
 	font: bold 2rem/2 "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
 }

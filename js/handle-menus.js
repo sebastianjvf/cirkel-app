@@ -88,6 +88,8 @@
 		
 		function hidePulse() {
 			perimetre.classList.remove('pulsing');
+			perimetre.style.opacity = '0';
+			perimetre.style.pointerEvents = 'none';
 		}
 		
 		// Listen for selected events
@@ -154,6 +156,7 @@
 					
 					setTimeout(function() {
 						hidePulse();
+						
 					}, 1100);
 					
 				}, 1500);
