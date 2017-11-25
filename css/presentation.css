@@ -157,8 +157,8 @@ div#single-song-menu {
 div#song-list h1,
 div#single-song-menu h1 {
 	color: #000000;
-	padding-left: 2.5rem;
-	font: bold 2.5rem/2 "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	padding-left: 2rem;
+	font: bold 2rem/2 "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
 }
 
 div#song-list ul,
@@ -168,9 +168,9 @@ div#single-song-menu div#single-song {
 
 div#song-list ul li,
 div#single-song-menu div#single-song {
-	font-size: 2.2rem;
+	font-size: 1.8rem;
 	text-transform: uppercase;
-	padding: 2.5rem 2.5rem 2.5rem 2.5rem;
+	padding: 1.5rem 1.5rem 1.5rem 1.5rem;
 	
 	display: flex;
 	flex-direction: row;
@@ -181,14 +181,14 @@ div#song-list ul li div.song-colour,
 div#song-list ul li div.preview,
 div#single-song-menu div.song-colour, 
 div#single-song-menu div.preview {
-	width: 5rem;
-	height: 5rem;
+	width: 4rem;
+	height: 4rem;
 }
 
 div#song-list ul li div.song-colour,
 div#single-song-menu div.song-colour {
-	width: 5rem;
-	height: 5rem;
+	width: 4rem;
+	height: 4rem;
 	border-radius: 100%;
 	background-color: #ffffff;
 }
@@ -196,7 +196,7 @@ div#single-song-menu div.song-colour {
 div#song-list ul li div.info,
 div#single-song-menu div.info {
 	flex: 1 0 0;
-	margin-left: 3rem;
+	margin-left: 2rem;
 }
 
 /* Song title */
@@ -205,13 +205,13 @@ div#single-song-menu div.info span.title {
 	display: block;
 	color: #f0f0f0;
 	text-transform: none;
-	margin-bottom: 0.5rem;
+	margin-bottom: 0.3rem;
 }
 
 div#song-list ul li div.info span.artist,
 div#single-song-menu div.info span.artist {
 	color: #888888;
-	font-size: 1.5rem;
+	font-size: 1.3rem;
 }
 
 div#song-list ul li div.preview,
@@ -230,8 +230,8 @@ div#single-song-menu a.added {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	width: 5.3rem;
-	height: 5.3rem;
+	width: 4.3rem;
+	height: 4.3rem;
 	transition: border-color 0.2s ease-in-out, color 0.2s ease-in-out;
 }
 
@@ -240,7 +240,7 @@ div#song-list ul li a.added,
 div#single-song-menu a.add,
 div#single-song-menu a.added {
 	margin-left: 2rem;
-	background: url('../img/add.svg') no-repeat center center/30%;
+	background: url('../img/add.svg') no-repeat center center/36%;
 }
 
 div#song-list ul li a.added,
