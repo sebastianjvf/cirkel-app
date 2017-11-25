@@ -18,9 +18,9 @@ main {
 
 /* Header bar */
 header {
-	padding: 2rem;
+	padding: 1.2rem;
 	color: #f0f0f0;
-	font-size: 2.5rem;
+	font-size: 2rem;
 	font-weight: bold;
 	top: 0;
 	background-color: rgba(0, 0, 0, .9);
@@ -38,8 +38,8 @@ div#visualisation {
 }
 
 div#user-circle {
-	width: 23rem;
-	height: 23rem;
+	width: 19rem;
+	height: 19rem;
 	border-radius: 30rem;
 	background-color: #B9316E;
 	
@@ -47,7 +47,7 @@ div#user-circle {
 	justify-content: center;
 	align-items: center;
 	
-	font-size: 2.5rem;
+	font-size: 2rem;
 	font-weight: bold;
 	color: #791240;
 	
@@ -55,8 +55,8 @@ div#user-circle {
 }
 
 div#perimetre {
-	width: 30rem;
-	height: 30rem;
+	width: 24rem;
+	height: 24rem;
 	border-radius: 30rem;
 	background-color: rgba(45, 45, 45, .15);
 	display: flex;
@@ -74,11 +74,11 @@ div#perimetre {
 
 @keyframes pulse {
 	from {
-		transform: translateX(-12%) translateY(-11.5%) scale(1.2);
+		transform: translateX(-11%) translateY(-10%) scale(1.2);
 	}
 	
 	to {
-		transform: translateX(-12%) translateY(-11.5%);
+		transform: translateX(-11%) translateY(-10%);
 	}
 }
 
@@ -147,10 +147,6 @@ div#single-song-menu {
 	position: absolute;
 	width: 100%;
 	transition: bottom 0.4s ease-in-out;
-}
-
-div#single-song-menu {
-	position: fixed;
 }
 
 div#song-list h1,
