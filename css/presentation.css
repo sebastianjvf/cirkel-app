@@ -95,8 +95,13 @@ ul#little-circles li {
 	width: 2.5rem;
 	height: 2.5rem;
 	border-radius: 100%;
+	cursor: pointer;
 	background-color: #000000;
 	position: relative;
+}
+
+ul#little-circles li.selected:before {
+	content: 'Hello';
 }
 
 ul#little-circles li#circle-0 {
