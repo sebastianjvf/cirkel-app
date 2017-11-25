@@ -17,7 +17,17 @@ header {
 
 div#visualisation {
 	width: 100%;
-	height: 40rem;
+	height: 42rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+div#perimetre {
+	width: 28rem;
+	height: 28rem;
+	border-radius: 100%;
+	background-color: #ededed;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -49,4 +59,7 @@ div#user-circle {
 		width: 23rem;
 		height: 23rem;
 	}
+}
+
+div.little-circles {
 }
