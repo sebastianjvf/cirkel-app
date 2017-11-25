@@ -267,7 +267,7 @@ div#song-list ul li a.added,
 div#song-list ul li a.added:hover,
 div#song-list ul li a.added:focus,
 div#single-song-menu a.added,
-div#single-song-menua.added:hover,
+div#single-song-menu a.added:hover,
 div#single-song-menu a.added:focus {
 	border-color: #1ED760;
 	background-size: 40%;
@@ -286,8 +286,14 @@ div#single-song-menu a.add:focus {
 	border-color: #f0f0f0;
 }
 
+div#song-list ul li div.preview {
+	text-indent: -9999rem;
+	background: url('../img/play.svg') no-repeat center center/30%; 
+}
+
 div#single-song {
 	flex-wrap: wrap;
+	border-bottom: 2rem solid transparent;
 }
 
 /* Close single song menubutton */
