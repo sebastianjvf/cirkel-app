@@ -88,8 +88,13 @@
 		
 		function hidePulse() {
 			perimetre.classList.remove('pulsing');
+			
+			// Finish the animation at the end
 			perimetre.style.opacity = '0';
 			perimetre.style.pointerEvents = 'none';
+			
+			// Fade out the text label
+			textLabel.style.opacity = '0';
 		}
 		
 		// Listen for selected events

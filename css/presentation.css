@@ -79,6 +79,11 @@ div#user-circle {
 	transition: all 0.3s ease-in-out;
 }
 
+div#user-circle span#text {
+	opacity: 1;
+	transition: opacity 0.2s ease-in-out;
+}
+
 div#perimetre {
 	width: 17rem;
 	height: 17rem;
@@ -102,7 +107,7 @@ div.pulsing {
 
 @keyframes pulse {
 	from {
-		transform: translateX(0%) translateY(0%);
+		transform: translateX(0%) translateY(0%) scale(0);
 	}
 	
 	to {
