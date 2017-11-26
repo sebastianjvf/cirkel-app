@@ -26,13 +26,13 @@ function sendRequest(url, method, eventname, callback) {
 	
 	window.addEventListener(eventname, callback);
 	
+	// Start the connection
+	request.open(method, url, true);
+	
 	if (method === 'POST') {
 		// Add a header to every POST request
 		request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 	}
-	
-	// Start the connection
-	request.open(method, url, true);
 	
 	// Send a JSON string if given
 	// Has to be POST
