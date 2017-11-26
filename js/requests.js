@@ -35,7 +35,7 @@ function sendRequest(url, method, eventname, callback, save) {
 	if ("withCredentials" in request && save) {
 	    // Check if the XMLHttpRequest object has a "withCredentials" property.
 	    // "withCredentials" only exists on XMLHTTPRequest2 objects.
-	    request.withCredentials = true;
+	    request.withCredentials = false;
 	}
 	
 	// Connect
