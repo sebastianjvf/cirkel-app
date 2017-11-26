@@ -21,6 +21,7 @@
 		startButton.addEventListener('click', function() {
 			
 			console.log('click');
+			window.location.replace('/app.html');
 			
 			// Make post request
 			sendRequest(baseUrl + userEndpoint, 'POST', 'authenticated', function(event) { 
