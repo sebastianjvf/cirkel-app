@@ -73,7 +73,7 @@ function makeLocationCall() {
 	    
 	    // Send to server on call and receive some output
 	    // TODO
-	    sendRequest(JSON, 'url');
+	    sendLocationRequest(JSON, 'url');
 	};
 	
 	// If an error occured, display it on the screen
@@ -117,7 +117,7 @@ function packToJSON(latitude, longitude) {
 }
 
 // Sends the GPS data to the server
-function sendRequest(JSON, url) {
+function sendLocationRequest(JSON, url) {
 	// Make a request
 	let request = new XMLHttpRequest();
 	
