@@ -4,6 +4,7 @@ let userEndpoint = 'users/';
 function sendRequest(url, method, eventname, callback) {
 	// Make a request
 	let request = new XMLHttpRequest();
+	let JSON = '';
 	
 	request.onreadystatechange = function() {
 	    // When the request was successful
@@ -35,13 +36,11 @@ function sendRequest(url, method, eventname, callback) {
 	
 	// Send a JSON string if given
 	// Has to be POST
-	/*
-	if (JSON === '' || !JSON && method === 'POST') {
+	if (JSON === '' || !JSON) {
 		request.send();
 	} else {
 		request.send(JSON);
 	}
-	*/
 }
 
 /* REQUEST THE GEO DATA */
