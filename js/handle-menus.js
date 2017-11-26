@@ -99,6 +99,8 @@
 		window.addEventListener('circle-selected', function(event) {
 			hideSongList();
 			showSingleSongMenu();
+			document.getElementsByClassName('song-colour')[0].style.backgroundColor = event.detail.colour;
+			console.log(event.detail.element);
 		});
 		
 		// Listen for deselected events

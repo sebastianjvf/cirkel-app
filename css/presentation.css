@@ -159,26 +159,31 @@ ul#little-circles li.selected:before {
 ul#little-circles li#circle-0 {
 	top: 10%;
 	left: 30%;
+	background-color: #3E95EB;
 }
 
 ul#little-circles li#circle-1 {
 	top: 30%;
 	left: 10%;
+	background-color: #836DEB;
 }
 
 ul#little-circles li#circle-2 {
 	top: 10%;
 	left: 80%;
+	background-color: #83EEEB;
 }
 
 ul#little-circles li#circle-3 {
 	top: 30%;
 	left: 75%;
+	background-color: #C088EB;
 }
 
 ul#little-circles li#circle-4 {
 	top: 56%;
 	left: 35%;
+	background-color: #FF70AB;
 }
 
 /* Tracks */

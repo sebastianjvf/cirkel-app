@@ -14,6 +14,11 @@ function sendRequest(url, method, eventname, callback, save) {
 	       console.log(request.responseText);
 	       dataReceived =  request.responseText;
 	       
+	       // Read out the user_id and redirect
+	       // TODO
+	       let userId = '';
+	       location.replace("/app.html#" + userId);
+	       
 	       // Dispatch a data received event to update the UI
 	       // let dataReceived now		       
 	       let event = new CustomEvent(eventname, {

@@ -26,7 +26,7 @@
 					circle.classList.add(selectedClassName);
 					
 					// UPDATE menu
-					// TODO
+					console.log(window.getComputedStyle(circle).backgroundColor);
 					
 					console.log('SELECTED');
 					
@@ -34,7 +34,12 @@
 					circleArray.forEach(function(circleDeselect, number) {
 						if (i == number) {
 							// Dispatch event to show menu
-							let circleSelected = new CustomEvent('circle-selected');
+							let circleSelected = new CustomEvent('circle-selected', 
+								{'detail' : { 
+									'element' : circle,
+									'colour' : window.getComputedStyle(circle).backgroundColor
+									}
+								});
 							window.dispatchEvent(circleSelected);
 						} else {	
 							circleDeselect.classList.remove(selectedClassName);
