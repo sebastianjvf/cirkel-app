@@ -26,7 +26,7 @@
 			sendRequest(baseUrl + userEndpoint, 'POST', 'authenticated', function(event) { 
 				console.log('autenticated');
 				console.log(event.detail);
-			});
+			}, true);
 			
 		});
 		

@@ -1,7 +1,7 @@
 let baseUrl = 'http://95.85.31.26/';
 let userEndpoint = 'users/';
 
-function sendRequest(url, method, eventname, callback) {
+function sendRequest(url, method, eventname, callback, save) {
 	// Make a request
 	let request = new XMLHttpRequest();
 	let JSON = '';
@@ -27,6 +27,13 @@ function sendRequest(url, method, eventname, callback) {
 	window.addEventListener(eventname, callback);
 	
 	// Start the connection
+	if ("withCredentials" in request && save) {
+	    // Check if the XMLHttpRequest object has a "withCredentials" property.
+	    // "withCredentials" only exists on XMLHTTPRequest2 objects.
+	    request.withCredentials = true;
+	}
+	
+	// Connect
 	request.open(method, url, true);
 	
 	if (method === 'POST') {
