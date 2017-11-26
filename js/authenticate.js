@@ -23,12 +23,6 @@
 			console.log('click');
 			window.location.replace('/app.html');
 			
-			// Make post request
-			sendRequest(baseUrl + userEndpoint, 'POST', 'authenticated', function(event) { 
-				console.log('autenticated');
-				console.log(event.detail);
-			}, true);
-			
 		});
 		
 	});
