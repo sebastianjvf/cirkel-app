@@ -1,10 +1,9 @@
 let baseUrl = 'http://95.85.31.26/';
 let userEndpoint = 'users/';
 
-function sendRequest(url, method, eventname, callback, save) {
+function sendRequest(url, method, eventname, callback, save, JSON) {
 	// Make a request
 	let request = new XMLHttpRequest();
-	let JSON = '';
 	
 	request.onreadystatechange = function() {
 	    // When the request was successful
@@ -51,6 +50,7 @@ function sendRequest(url, method, eventname, callback, save) {
 	if (JSON === '' || !JSON) {
 		request.send();
 	} else {
+		console.log('Sending request with ' + JSON);
 		request.send(JSON);
 	}
 }
