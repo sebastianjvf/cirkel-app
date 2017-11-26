@@ -135,7 +135,7 @@
 			showPulse('Analysing...');
 			
 			// Request with a given user id
-			sendRequest(baseUrl + '/playlist/', 'POST', function() {}, true, '{ \"user_id\" : \"11129064513\"}');
+			// sendRequest(baseUrl + '/playlist/', 'POST', function() {}, true, '{ \"user_id\" : \"11129064513\"}');
 			
 			// After 3 seconds, make circles appear
 			setTimeout(function() {
