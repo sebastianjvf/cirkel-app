@@ -21,7 +21,7 @@
 		startButton.addEventListener('click', function() {
 			
 			console.log('click');
-			window.location.replace('/app.html');
+			window.location.replace('junction-spotify-front/app.html');
 			
 		});
 		
