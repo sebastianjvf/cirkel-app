@@ -16,6 +16,15 @@
 		
 		showMenuBar();
 		
+		startButton.addEventListener('click', function() {
+			
+			// Make post request
+			sendRequest(baseUrl + userEndpoint, 'POST', 'authenticated', function(event) { 
+				console.log(event.detail);
+			});
+			
+		});
+		
 	});
 
 })();
